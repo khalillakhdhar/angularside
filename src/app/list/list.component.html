@@ -1,5 +1,9 @@
-    <table>
+    <table class="table table-bordered-responsive">
 
-<tr></tr>
+<tr>
+    <th>Id</th><th>First name</th><th>Last name</th><th>Age</th><th>Address</th><th>Action</th></tr>
+    <tr *ngFor="let cs of costumers">
+    <td>{{cs.id}}</td><td>{{cs.firstname}}</td><td>{{cs.lastname}}</td><td>{{cs.age}}</td><td>{{cs.address}}</td><td><button>Supprimer</button></td>
+</tr>
 </table>
 

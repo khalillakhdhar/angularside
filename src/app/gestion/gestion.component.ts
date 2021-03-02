@@ -20,7 +20,7 @@ costumer:Customer;
 
     save(): void {
     this.customerService.create(this.costumer as Customer).subscribe(costumer => {this.costumers.push(this.costumer); });
-  //  window.location.reload();
+   window.location.reload();
   this.costumer=new Customer();
     }
 
