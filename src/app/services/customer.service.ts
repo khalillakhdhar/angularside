@@ -32,7 +32,7 @@ export class CustomerService {
     }
     delete(customer: Customer | number): Observable<Customer> {
       const id = typeof customer === 'number' ? customer : customer.id;
-      const url = `${'http://localhost:8080/api/customers/deletebyid/:id'}/${id}`;
+      const url = `${'http://localhost:8080/api/customers/deletebyid/'}${id}`;
   
       return this.http.delete<Customer>(url, httpOptions).pipe(
         tap(_ => console.log(`deleted customer id=${id}`)),

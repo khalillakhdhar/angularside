@@ -30,7 +30,7 @@ costumer:Customer;
      if(confirm("êtes vous sûre de vouloire supprimer le client ?"))
      {
        this.customerService.delete(id).subscribe();
-
+window.location.reload();
      }
    }
 }
