@@ -2,8 +2,8 @@
 <table>
     <tr><td>Firstname</td><td> <input [(ngModel)]="costumer.firstname" pattern="[A-Z a-z0-9]{2,20}" name="firstname" type="text" class="form-control" required></td></tr>
     <tr><td>Lastname</td><td> <input [(ngModel)]="costumer.lastname" pattern="[A-Z a-z0-9]{2,20}" name="lastname" type="text" class="form-control" required></td></tr>
-    <tr><td>adress</td><td> <input [(ngModel)]="costumer.adress" pattern="[A-Z a-z0-9]{2,20}" name="adress" type="text" class="form-control" required></td></tr>
-    <tr><td>age</td><td> <input [(ngModel)]="costumer.age" pattern="[A-Z a-z0-9]{2,20}" name="age" type="text" class="form-control" required></td></tr>
+    <tr><td>adress</td><td> <textarea [(ngModel)]="costumer.address" class="form-control" required></textarea></td></tr>
+    <tr><td>age</td><td> <input [(ngModel)]="costumer.age"  name="age" type="number" min="18" class="form-control" required></td></tr>
 
     <tr><td> <input value="Enregistrer" (click)="save()" [disabled]="myForm.invalid" class="btn btn-primary" type="submit"></td></tr>
 </table>
