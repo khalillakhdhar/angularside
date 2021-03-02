@@ -25,5 +25,12 @@ costumer:Customer;
 
     });
    }
-   
+   delete( id:any)
+   {
+     if(confirm("êtes vous sûre de vouloire supprimer le client ?"))
+     {
+       this.customerService.delete(id);
+       
+     }
+   }
 }
