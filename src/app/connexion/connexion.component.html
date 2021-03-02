@@ -6,15 +6,15 @@
           <form (submit)="connect()">
         <table >
 <tr><td colspan="2"><h1>Connexion</h1></td></tr>
-<tr><td>firstname:</td><td><input type="text" [(ngModel)]="costumer.firstname" required class="form-control" name="fn"></td></tr>
+<tr><td>firstname:</td><td><input type="text" [(ngModel)]="costumer.firstname"  required class="form-control" name="fn"></td></tr>
 <tr><td>lastname:</td><td><input type="text" [(ngModel)]="costumer.lastname" class="form-control" name="ln"></td></tr>
 <tr><td colspan="2"><input type="submit" value="se connecter" class="btn btn-primary"> </td></tr>
 
         </table></form>
-        <ul>
 
-
-        </ul>
+        <div *ngIf="existe==false" class="alert alert-danger" role="alert">
+              Verifier les cordoonees
+        </div>
       </div>
       <div class="col-sm">
       </div>

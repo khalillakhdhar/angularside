@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { Customer } from '../classes/customer';
 import { CustomerService } from '../services/customer.service';
 
@@ -11,7 +10,7 @@ import { CustomerService } from '../services/customer.service';
 export class ConnexionComponent implements OnInit {
   costumers = new Array<Customer>();
 costumer:Customer;
-existe=false;
+existe:boolean;
   constructor(private customerService: CustomerService) { }
 
   ngOnInit() {
@@ -30,6 +29,7 @@ this.costumer=new Customer();
    
   connect()
   {
+  
     this.customerService.getUsers().subscribe(res => {
       this.costumers = res;
       for(let cs of this.costumers)
@@ -42,8 +42,11 @@ this.costumer=new Customer();
         }
 
       }
-      if(!this.existe)
-      alert("compte non reconnu");
+      if(!this.existe){
+        this.existe=false;
+        //alert("compte non reconnu");
+      }
+     
 
       console.log(this.costumers);
 
