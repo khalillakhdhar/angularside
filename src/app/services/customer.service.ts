@@ -22,6 +22,8 @@ export class CustomerService {
     getUsers(): Observable<Customer[]> {
       return this.http.get<Customer[]>(`${this.url}`)
     }
+
+    
     create(customer: Customer): Observable<any> {
       return this.http.post<Customer>('http://localhost:8080/api/customers/create', customer, httpOptions).pipe(
         tap((newCustomer: Customer) => console.log(`added hero w/ id=${newCustomer.id}`)),
