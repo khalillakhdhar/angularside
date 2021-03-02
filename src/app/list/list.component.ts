@@ -29,8 +29,8 @@ costumer:Customer;
    {
      if(confirm("êtes vous sûre de vouloire supprimer le client ?"))
      {
-       this.customerService.delete(id);
-       
+       this.customerService.delete(id).subscribe();
+
      }
    }
 }
