@@ -17,6 +17,7 @@ existe:boolean;
 this.costumer=new Customer();
     this.getusers();
     console.log(this.costumers);
+    this.existe==null;
   }
 
   getusers(): void {
@@ -42,7 +43,7 @@ this.costumer=new Customer();
         }
 
       }
-      if(!this.existe){
+      if(this.existe!=true){
         this.existe=false;
         //alert("compte non reconnu");
       }
