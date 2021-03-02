@@ -39,6 +39,7 @@ this.costumer=new Customer();
         if((cs.firstname===this.costumer.firstname)&&(cs.lastname===this.costumer.lastname))
         {
           this.existe=true;
+          localStorage.setItem("id",cs.id.toString());
           window.location.replace("gestion");
           
         }
