@@ -8,7 +8,7 @@ import { CustomerService } from '../services/customer.service';
   styleUrls: ['./connexion.component.css']
 })
 export class ConnexionComponent implements OnInit {
-  costumers = new Array<Customer>();
+  costumers :Customer[];
 costumer:Customer;
 existe:boolean;
   constructor(private customerService: CustomerService) { }
