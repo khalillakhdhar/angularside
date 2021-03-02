@@ -9,6 +9,7 @@ import { CustomerService } from '../services/customer.service';
 })
 export class ConnexionComponent implements OnInit {
   costumers :Customer[];
+  
 costumer:Customer;
 existe:boolean;
   constructor(private customerService: CustomerService) { }
