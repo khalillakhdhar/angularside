@@ -11,6 +11,7 @@ import { CustomerService } from '../services/customer.service';
 export class ConnexionComponent implements OnInit {
   costumers = new Array<Customer>();
 costumer:Customer;
+existe=false;
   constructor(private customerService: CustomerService) { }
 
   ngOnInit() {
@@ -35,12 +36,15 @@ this.costumer=new Customer();
       {
         if((cs.firstname===this.costumer.firstname)&&(cs.lastname===this.costumer.lastname))
         {
+          this.existe=true;
           window.location.replace("gestion");
+          
         }
-        else
 
-        alert("compte non reconnu");
       }
+      if(!this.existe)
+      alert("compte non reconnu");
+
       console.log(this.costumers);
 
     });
